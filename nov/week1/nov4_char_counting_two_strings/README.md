@@ -6,8 +6,8 @@
 - **Edge Case Missed:** Empty jewels or stones strings, or strings with no matching characters.
 
 ## 2. Find Common Characters (LeetCode 1002)
-- **Approach:** Evaluated minimum character frequencies across all words in the input list, constructing the result collection using list multiplication and combination without `.append()`.
-- **Complexity:** $O(n \cdot m)$ time and $O(1)$ auxiliary space (bounded by alphabet size).
+- **Approach:** Tracked character frequencies using fixed-size integer arrays (size 26) across words, manually maintaining minimum frequency bounds without using `min()` or `.append()`, and reconstructing the result via pre-allocated list index assignment.
+- **Complexity:** $O(N \cdot M)$ time and $O(1)$ auxiliary space.
 - **Edge Case Missed:** Arrays with single words or words sharing zero common characters.
 
 ## 3. Ransom Note (LeetCode 383)
