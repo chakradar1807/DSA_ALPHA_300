@@ -1,17 +1,10 @@
 class Solution:
-    def repeatedStringMatch(self, a: str, b: str) -> int:
-        repeatA = a
+    def repeatedStringMatch(self, a, b):
+        repeat = (len(b)//len(a))
         count = 1
-
-        while len(repeatA) < len(b):
-            repeatA += a
-            count += 1
-            if b in repeatA:
+        while count <= repeat + 2:
+            if b in a*count:
                 return count
-
-        repeatA += a
-        count += 1
-        if b in repeatA:
-            return count
-
+            else:
+                count += 1
         return -1
